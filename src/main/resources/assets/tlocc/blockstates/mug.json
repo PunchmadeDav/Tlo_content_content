@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "filled=false": {
+            "model": "tlocc:block/mug_empty"
+        },
+        "filled=true": {
+            "model": "tlocc:block/mug_filled"
+        }
+    }
+}

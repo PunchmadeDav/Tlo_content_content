@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "tlocc",
+  "version": "${version}",
+  "name": "TLO Content Content",
+  "description": "",
+  "authors": [
+    "Chryseon",
+    "Punchmade Dav"
+  ],
+  "contact": {},
+  "license": "GPL-3.0",
+  "icon": "assets/tlocc/icon.png",
+  "environment": "*",
+  "accessWidener" : "tlocc.accesswidener",
+  "entrypoints": {
+    "client": [
+      "chryseonanddav.tlocc.client.TLOCCClient"
+    ],
+    "main": [
+      "chryseonanddav.tlocc.TLOCC"
+    ]
+  },
+  "mixins": [
+    "tlocc.mixins.json"
+  ]
+}

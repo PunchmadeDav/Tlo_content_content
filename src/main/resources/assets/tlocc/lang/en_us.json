@@ -1,0 +1,27 @@
+{
+  "itemGroup.tlocc.tlocc_tab": "Content Content For TLO",
+
+
+  "block.tlocc.chocolate_egg": "Chocolate Egg",
+  "block.tlocc.mug": "Mug",
+  "block.tlocc.chiseled_chocolate_egg": "Chiseled Chocolate Egg",
+  "block.tlocc.chocolate_raven": "Chocolate Raven",
+  "block.tlocc.chocolate_rat": "Chocolate Rat",
+  "block.tlocc.chocolate_frog": "Chocolate Frog",
+  "block.tlocc.chocolate_crewmate": "Chocolate Crewmate",
+  "block.tlocc.chocolate_squirrel": "Chocolate Squirrel",
+  "block.tlocc.aquarium_glass_pane": "Aquarium Glass Pane",
+  "block.tlocc.iron_scaffolding": "Iron Scaffolding",
+  "block.tlocc.brazier": "Brazier",
+  "block.tlocc.soul_brazier": "Soul Brazier",
+
+  "block.tlocc.acacia_connected_log": "Acacia Connected Log",
+  "block.tlocc.birch_connected_log": "Birch Connected Log",
+  "block.tlocc.crimson_connected_log": "Crimson Connected Log",
+  "block.tlocc.dark_oak_connected_log": "Dark Oak Connected Log",
+  "block.tlocc.jungle_connected_log": "Jungle Connected Log",
+  "block.tlocc.mangrove_connected_log": "Mangrove Connected Log",
+  "block.tlocc.oak_connected_log": "Oak Connected Log",
+  "block.tlocc.spruce_connected_log": "Spruce Connected Log",
+  "block.tlocc.warped_connected_log": "Warped Connected Log"
+}

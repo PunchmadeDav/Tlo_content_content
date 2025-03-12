@@ -1,0 +1,13 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "tlocc:warped_connected_log"
+        }
+      ]
+    }
+  ]
+}

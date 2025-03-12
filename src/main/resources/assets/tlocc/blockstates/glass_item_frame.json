@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "": {
+            "model": "tlocc:block/glass_item_frame"
+        }
+    }
+}

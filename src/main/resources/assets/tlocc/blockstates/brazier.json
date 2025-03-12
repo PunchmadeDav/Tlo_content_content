@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "hanging=false": {
+            "model": "tlocc:block/brazier"
+        },
+        "hanging=true": {
+            "model": "tlocc:block/brazier_hanging"
+        }
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "hanging=false": {
+            "model": "tlocc:block/soul_brazier"
+        },
+        "hanging=true": {
+            "model": "tlocc:block/soul_brazier_hanging"
+        }
+    }
+}
