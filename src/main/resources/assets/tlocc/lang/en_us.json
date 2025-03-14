@@ -23,5 +23,17 @@
   "block.tlocc.mangrove_connected_log": "Mangrove Connected Log",
   "block.tlocc.oak_connected_log": "Oak Connected Log",
   "block.tlocc.spruce_connected_log": "Spruce Connected Log",
-  "block.tlocc.warped_connected_log": "Warped Connected Log"
+  "block.tlocc.warped_connected_log": "Warped Connected Log",
+  "block.tlocc.cherry_connected_log": "Cherry Connected Log",
+
+  "block.tlocc.stripped_acacia_connected_log": "Stripped Acacia Connected Log",
+  "block.tlocc.stripped_birch_connected_log": "Stripped Birch Connected Log",
+  "block.tlocc.stripped_crimson_connected_log": "Stripped Crimson Connected Log",
+  "block.tlocc.stripped_dark_oak_connected_log": "Stripped Dark Oak Connected Log",
+  "block.tlocc.stripped_jungle_connected_log": "Stripped Jungle Connected Log",
+  "block.tlocc.stripped_mangrove_connected_log": "Stripped Mangrove Connected Log",
+  "block.tlocc.stripped_oak_connected_log": "Stripped Oak Connected Log",
+  "block.tlocc.stripped_spruce_connected_log": "Stripped Spruce Connected Log",
+  "block.tlocc.stripped_warped_connected_log": "Stripped Warped Connected Log",
+  "block.tlocc.stripped_cherry_connected_log": "Stripped Cherry Connected Log"
 }
