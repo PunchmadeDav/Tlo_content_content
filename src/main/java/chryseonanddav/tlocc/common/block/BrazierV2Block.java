@@ -2,9 +2,11 @@ package chryseonanddav.tlocc.common.block;
 
 import net.minecraft.block.*;
 import net.minecraft.block.enums.BlockHalf;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.damage.DamageSource;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.util.math.BlockPos;
@@ -42,12 +44,14 @@ public class BrazierV2Block extends Block {
         return state.get(HANGING) ? HANGING_SHAPE : GROUND_SHAPE;
     }
 
-    public void onSteppedOn(World world, BlockPos pos, BlockState state, PlayerEntity player) {
+    @Override
+    public void onSteppedOn(World world, BlockPos pos, BlockState state, Entity entity) {
         if (!world.isClient) {
-            player.damage(world.getDamageSources().inFire(), 1.0F); // Deals 1 heart of fire damage
-            player.setOnFireFor(3); // Sets player on fire for 3 seconds
+            entity.damage(world.getDamageSources().inFire(), 1.0F); // Deals 1 heart of fire damage
+            entity.setOnFireFor(3); // Sets entity on fire for 3 seconds
+            world.playSound(null, pos, SoundEvents.BLOCK_CAMPFIRE_CRACKLE, SoundCategory.BLOCKS, 0.5F, 1.0F);
         }
-        super.onSteppedOn(world, pos, state, player);
+        super.onSteppedOn(world, pos, state, entity);
     }
 
     @Override
@@ -57,12 +61,16 @@ public class BrazierV2Block extends Block {
             double y = pos.getY() + (state.get(HANGING) ? 0.9 : 0.8); // Adjust particle height
             double z = pos.getZ() + 0.5;
 
-
             // Campfire smoke particles
             if (random.nextFloat() < 0.5F) {
                 world.addParticle(ParticleTypes.CAMPFIRE_COSY_SMOKE,
                         x, y + 0.5, z,
                         0.0, 0.07, 0.0);
+            }
+
+            // Fire crackling sound effect
+            if (random.nextFloat() < 0.2F) {
+                world.playSound(x, y, z, SoundEvents.BLOCK_FIRE_AMBIENT, SoundCategory.BLOCKS, 0.3F, 1.0F, false);
             }
         }
     }
