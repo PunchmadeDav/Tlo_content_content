@@ -30,7 +30,7 @@ import net.minecraft.world.World;
 import java.util.List;
 
 public class MugBlock extends Block {
-    private static final VoxelShape SHAPE = createCuboidShape(0, 0, 0, 10, 7, 10);
+    private static final VoxelShape SHAPE = createCuboidShape(5, 0, 5, 10, 7, 10);
     public static final BooleanProperty FILLED = BooleanProperty.of("filled");
     private static final String LIQUID_KEY = "Liquid";
 
