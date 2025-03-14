@@ -3,25 +3,17 @@ package chryseonanddav.tlocc.registry;
 import chryseonanddav.tlocc.TLOCC;
 import chryseonanddav.tlocc.common.ModFoodComponents;
 import chryseonanddav.tlocc.common.block.*;
-import chryseonanddav.tlocc.common.items.ContractItem;
-import chryseonanddav.tlocc.common.items.TeleporterItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import net.minecraft.registry.RegistryKey;
 import net.minecraft.sound.BlockSoundGroup;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.Rarity;
-
-import java.util.LinkedHashMap;
-import java.util.Map;
+import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 
 public class BlockRegistry {
 //    private static final Map<Item, Identifier> ITEMS = new LinkedHashMap<>();
@@ -50,11 +42,22 @@ public class BlockRegistry {
     public static final Block OAK_CONNECTED_LOG_BLOCK = registerBlock("oak_connected_log", new ConnectedLogsBlock(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)));
     public static final Block SPRUCE_CONNECTED_LOG_BLOCK = registerBlock("spruce_connected_log", new ConnectedLogsBlock(AbstractBlock.Settings.copy(Blocks.SPRUCE_PLANKS)));
     public static final Block WARPED_CONNECTED_LOG_BLOCK = registerBlock("warped_connected_log", new ConnectedLogsBlock(AbstractBlock.Settings.copy(Blocks.WARPED_PLANKS)));
+    public static final Block CHERRY_CONNECTED_LOG_BLOCK = registerBlock("cherry_connected_log", new ConnectedLogsBlock(AbstractBlock.Settings.copy(Blocks.CHERRY_PLANKS)));
 
-
+    public static final Block STRIPPED_ACACIA_CONNECTED_LOG_BLOCK = registerBlock("stripped_acacia_connected_log", new ConnectedLogsBlock(AbstractBlock.Settings.copy(Blocks.ACACIA_PLANKS)));
+    public static final Block STRIPPED_BIRCH_CONNECTED_LOG_BLOCK = registerBlock("stripped_birch_connected_log", new ConnectedLogsBlock(AbstractBlock.Settings.copy(Blocks.BIRCH_PLANKS)));
+    public static final Block STRIPPED_CRIMSON_CONNECTED_LOG_BLOCK = registerBlock("stripped_crimson_connected_log", new ConnectedLogsBlock(AbstractBlock.Settings.copy(Blocks.CRIMSON_PLANKS)));
+    public static final Block STRIPPED_DARK_OAK_CONNECTED_LOG_BLOCK = registerBlock("stripped_dark_oak_connected_log", new ConnectedLogsBlock(AbstractBlock.Settings.copy(Blocks.DARK_OAK_PLANKS)));
+    public static final Block STRIPPED_JUNGLE_CONNECTED_LOG_BLOCK = registerBlock("stripped_jungle_connected_log", new ConnectedLogsBlock(AbstractBlock.Settings.copy(Blocks.JUNGLE_PLANKS)));
+    public static final Block STRIPPED_MANGROVE_CONNECTED_LOG_BLOCK = registerBlock("stripped_mangrove_connected_log", new ConnectedLogsBlock(AbstractBlock.Settings.copy(Blocks.MANGROVE_PLANKS)));
+    public static final Block STRIPPED_OAK_CONNECTED_LOG_BLOCK = registerBlock("stripped_oak_connected_log", new ConnectedLogsBlock(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)));
+    public static final Block STRIPPED_SPRUCE_CONNECTED_LOG_BLOCK = registerBlock("stripped_spruce_connected_log", new ConnectedLogsBlock(AbstractBlock.Settings.copy(Blocks.SPRUCE_PLANKS)));
+    public static final Block STRIPPED_WARPED_CONNECTED_LOG_BLOCK = registerBlock("stripped_warped_connected_log", new ConnectedLogsBlock(AbstractBlock.Settings.copy(Blocks.WARPED_PLANKS)));
+    public static final Block STRIPPED_CHERRY_CONNECTED_LOG_BLOCK = registerBlock("stripped_cherry_connected_log", new ConnectedLogsBlock(AbstractBlock.Settings.copy(Blocks.CHERRY_PLANKS)));
 //    public static final Item CONTRACT = createItem("contract", new ContractItem(new FabricItemSettings().fireproof().rarity(Rarity.EPIC).maxCount(1)));
 //    public static final Item GRIMOIRE = createItem("grimoire", new Item(new FabricItemSettings().fireproof().rarity(Rarity.EPIC).maxCount(1)));
 //    public static final Item TELEPORTER = createItem("teleporter", new TeleporterItem(new FabricItemSettings().fireproof().rarity(Rarity.EPIC).maxCount(1)));
+
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
@@ -84,12 +87,24 @@ public class BlockRegistry {
         return item;
     }
 
+
 //    private static <T extends Item> T createItem(String name, T item) {
 //        ITEMS.put(item, new Identifier(TLOCC.MOD_ID, name));
 //        return item;
 //    }
 
+
     public static void register() {
+        StrippableBlockRegistry.register(ACACIA_CONNECTED_LOG_BLOCK, STRIPPED_ACACIA_CONNECTED_LOG_BLOCK);
+        StrippableBlockRegistry.register(BIRCH_CONNECTED_LOG_BLOCK, STRIPPED_BIRCH_CONNECTED_LOG_BLOCK);
+        StrippableBlockRegistry.register(CRIMSON_CONNECTED_LOG_BLOCK, STRIPPED_CRIMSON_CONNECTED_LOG_BLOCK);
+        StrippableBlockRegistry.register(DARK_OAK_CONNECTED_LOG_BLOCK, STRIPPED_DARK_OAK_CONNECTED_LOG_BLOCK);
+        StrippableBlockRegistry.register(JUNGLE_CONNECTED_LOG_BLOCK, STRIPPED_JUNGLE_CONNECTED_LOG_BLOCK);
+        StrippableBlockRegistry.register(MANGROVE_CONNECTED_LOG_BLOCK, STRIPPED_MANGROVE_CONNECTED_LOG_BLOCK);
+        StrippableBlockRegistry.register(OAK_CONNECTED_LOG_BLOCK, STRIPPED_OAK_CONNECTED_LOG_BLOCK);
+        StrippableBlockRegistry.register(SPRUCE_CONNECTED_LOG_BLOCK, STRIPPED_SPRUCE_CONNECTED_LOG_BLOCK);
+        StrippableBlockRegistry.register(WARPED_CONNECTED_LOG_BLOCK, STRIPPED_WARPED_CONNECTED_LOG_BLOCK);
+        StrippableBlockRegistry.register(CHERRY_CONNECTED_LOG_BLOCK, STRIPPED_CHERRY_CONNECTED_LOG_BLOCK);
 //        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> {
 //            entries.add(CONTRACT);
 //            entries.add(TELEPORTER);
@@ -111,6 +126,17 @@ public class BlockRegistry {
             entries.add(OAK_CONNECTED_LOG_BLOCK);
             entries.add(SPRUCE_CONNECTED_LOG_BLOCK);
             entries.add(WARPED_CONNECTED_LOG_BLOCK);
+            entries.add(CHERRY_CONNECTED_LOG_BLOCK);
+            entries.add(STRIPPED_ACACIA_CONNECTED_LOG_BLOCK);
+            entries.add(STRIPPED_BIRCH_CONNECTED_LOG_BLOCK);
+            entries.add(STRIPPED_CRIMSON_CONNECTED_LOG_BLOCK);
+            entries.add(STRIPPED_DARK_OAK_CONNECTED_LOG_BLOCK);
+            entries.add(STRIPPED_JUNGLE_CONNECTED_LOG_BLOCK);
+            entries.add(STRIPPED_MANGROVE_CONNECTED_LOG_BLOCK);
+            entries.add(STRIPPED_OAK_CONNECTED_LOG_BLOCK);
+            entries.add(STRIPPED_SPRUCE_CONNECTED_LOG_BLOCK);
+            entries.add(STRIPPED_WARPED_CONNECTED_LOG_BLOCK);
+            entries.add(STRIPPED_CHERRY_CONNECTED_LOG_BLOCK);
         });
 
         // Add edible blocks to the Food & Drink tab
